@@ -1,0 +1,142 @@
+<!-- Page Content  -->
+<div id="content" class="p-4 p-md-5 pt-5">
+
+    <div class="panel-group">
+
+        <div class="panel ">
+
+            <div class="panel-body">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Parâmetros</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+                    </ol>
+                </nav>
+
+
+                <form class="form-horizontal" [formGroup]="paramForm">
+                    <fieldset>
+                        <div class="panel panel-primary  col-md-12">
+
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <div class="col-md-11 control-label">
+                                        <span class="help-block">
+                                            Campo Obrigatório <span class="asterisco">*</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="nome">Nome <span
+                                            class="asterisco">*</span></label>
+                                    <div class="col-md-8">
+                                        <input id="name" name="name" class="form-control input-md" required type="text"
+                                            formControlName="name"
+                                            [ngClass]="{ 'is-invalid': submitted && field.name.errors }">
+                                        <div *ngIf="submitted && field.name.errors" class="invalid-feedback">
+                                            <div *ngIf="field.name.errors.required">O campo Nome é Obrigatório</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="description">Descrição</label>
+                                    <div class="col-md-8">
+                                        <input id="description" name="description" class="form-control input-md" type="text"
+                                            formControlName="description"
+                                            [ngClass]="{ 'is-invalid': submitted && field.description.errors }">
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="application">Aplicação<span
+                                            class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <select id="application" name="application" class="form-control"
+                                            formControlName="application"
+                                            [ngClass]="{ 'is-invalid': submitted && field.application.errors }">
+                                            <option value=""></option>
+                                            <option value="timeline">Timeline</option>
+                                            <option value="categorizador">Categorizador</option>
+                                        </select>
+                                        <div *ngIf="submitted && field.application.errors" class="invalid-feedback">
+                                            <div *ngIf="field.application.errors.required">O campo Aplicação é Obrigatório
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="col-md-2 control-label" for="type">Tipo<span
+                                            class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <select id="type" name="type" class="form-control" formControlName="type"
+                                            [ngClass]="{ 'is-invalid': submitted && field.type.errors }">
+                                            <option value=""></option>
+                                            <option value="TOOGLE">Toogle</option>
+                                            <option value="INPUT_VALUE">Input Valor</option>
+                                        </select>
+                                        <div *ngIf="submitted && field.type.errors" class="invalid-feedback">
+                                            <div *ngIf="field.type.errors.required">O campo Tipo é Obrigatório</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="key">Chave<span
+                                            class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <input id="key" name="key" class="form-control input-md"
+                                            formControlName="key"
+                                            [ngClass]="{ 'is-invalid': submitted && field.key.errors }">
+                                        <div *ngIf="submitted && field.key.errors" class="invalid-feedback">
+                                            <div *ngIf="field.key.errors.required">O campo Chave é Obrigatório</div>
+                                        </div>
+                                    </div>
+
+                                    <label class="col-md-2 control-label" for="value">Valor<span
+                                            class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <input id="value" name="value" class="form-control input-md"
+                                            formControlName="value"
+                                            [ngClass]="{ 'is-invalid': submitted && field.value.errors }">
+                                        <div *ngIf="submitted && field.value.errors" class="invalid-feedback">
+                                            <div *ngIf="field.value.errors.required">O campo Valor é Obrigatório</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <!-- Button (Double) -->
+                                <div class="form-group" style="float: right">
+
+                                    <div class="col-md-5">
+                                        <button type="button" class="btn btn-primary"
+                                            (click)="addParam()">Cadastrar</button>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-danger" (click)="clean()">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

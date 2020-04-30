@@ -1,0 +1,81 @@
+<!-- Page Content  -->
+<div id="content" class="p-4 p-md-5 pt-5">
+
+    <div class="panel-group">
+
+        <div class="panel  col-md-12 ">
+
+            <div class="panel-body ">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Parâmetros</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Listar</li>
+                    </ol>
+                </nav>
+
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="panel panel-primary col-md-12">
+
+                            <div class="panel-body ">
+
+                                <br>
+
+                                <table id="datatable" class="table table-striped table-bordered" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Descrição</th>
+                                            <th>Aplicação</th>
+                                            <th>Tipo</th>
+                                            <th>Chave</th>
+                                            <th>Valor</th>
+                                            <th></th>                                            
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr *ngFor="let param of parametros | paginate: config">
+                                            <td>{{ param.name}}</td>
+                                            <td>{{ param.description}}</td>
+                                            <td>{{ param.application }}</td>
+                                            <td>{{ param.type }}</td>
+                                            <td>{{ param.key }}</td>
+                                            <td>{{ param.value}}</td>
+                                            <td>
+                                                <button
+                                                class="btn btn-danger"
+                                                mwlConfirmationPopover
+                                                [popoverTitle]="popoverTitle"
+                                                [popoverMessage]="popoverMessage"
+                                                placement="left"
+                                                (confirm)="delete(param.id)"
+                                                (cancel)="cancelClicked = true">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                              </button>
+                                             
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <div class="clearfix"></div>
+                                <pagination-controls style="text-align: center;" (pageChange)="pageChanged($event)"></pagination-controls>
+
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

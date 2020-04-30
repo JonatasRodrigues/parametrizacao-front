@@ -1,0 +1,86 @@
+<!-- Page Content  -->
+<div id="content" class="p-4 p-md-5 pt-5">
+
+    <div class="panel-group">
+
+        <div class="panel ">
+
+            <div class="panel-body">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>                       
+                        <li class="breadcrumb-item active" aria-current="page">Sincronizar Configuração</li>
+                    </ol>
+                </nav>
+
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="panel panel-primary  col-md-12">
+
+                            <div class="panel-body">
+                              
+                                <div class="form-group">
+                                    <div class="col-md-11 control-label">
+                                        <span class="help-block">
+                                            Campo Obrigatório <span class="asterisco">*</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="aplicacao">Aplicação<span
+                                        class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <select id="aplicacao" name="aplicacao" class="form-control">
+                                            <option value=""></option>
+                                            <option value="timeline">Timeline</option>
+                                            <option value="categorizador">Categorizador</option>
+                                        </select>   
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="instancia">Instâncias<span
+                                        class="asterisco">*</span></label>
+                                    <div class="col-md-3">
+                                        <select id="instancia" name="instancia" class="form-control">
+                                            <option value="">Todas Instâncias</option>
+                                            <option value="inst1">inst1.prod.ihf</option>
+                                            <option value="inst2">inst2.prod.ihf</option>
+                                            <option value="inst3">inst3.prod.ihf</option>
+                                        </select>   
+                                    </div>
+                                </div>
+
+
+                                <br/>
+
+                                <!-- Button (Double) -->
+                                <div class="form-group" style="float: right">
+                                    
+                                    <div class="col-md-5">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="pesquisacep(cep.value)">Cadastrar</button>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-danger"
+                                            onclick="pesquisacep(cep.value)">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

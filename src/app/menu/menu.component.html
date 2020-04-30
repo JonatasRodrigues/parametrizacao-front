@@ -1,0 +1,42 @@
+<nav id="sidebar">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+        </button>
+    </div>
+    <div class="p-4" id="menu">
+        <h1><a href="index.html" class="logo">PFM <span>ITAÚ</span></a></h1>
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a [routerLink]="['/']"><span class="fa fa-home mr-3"></span> Home</a>
+            </li>
+            <li>
+
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle ">
+                    <span class="fa fa-cubes mr-3"></span> Parâmetros
+                </a>
+
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a class="nav-link" [routerLink]="['/cadastrar']">Cadastro</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" [routerLink]="['/listar']">Lista</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="active">
+                <a [routerLink]="['/sincronizar']"><span class="fa fa-home mr-3"></span> Sincronizar</a>
+            </li>
+            <li class="active">
+                <a [routerLink]="['/']"><span class="fa fa-home mr-3"></span> API</a>
+            </li>
+            <li>
+                <a href="#"><span class="fa fa-sign-out mr-3"></span> Sair</a>
+            </li>
+        </ul>
+    </div>
+</nav>

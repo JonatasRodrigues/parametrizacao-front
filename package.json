@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~10.0.0-next.3",
     "@angular/router": "~10.0.0-next.3",
     "angular-confirmation-popover": "^5.0.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "jquery": "^3.5.0",
     "ngx-pagination": "^5.0.0",
     "ngx-toastr": "^12.0.1",
